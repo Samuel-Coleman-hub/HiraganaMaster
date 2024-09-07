@@ -1,4 +1,4 @@
-package com.example.hiraganamaster;
+package com.example.hiraganamaster.Kana;
 
 public class Kana {
     private String kana;

@@ -1,10 +1,14 @@
-package com.example.hiraganamaster;
+package com.example.hiraganamaster.Activities;
 
 import android.os.Bundle;
-import com.google.android.material.snackbar.Snackbar;
+
+import com.example.hiraganamaster.Kana.Kana;
+import com.example.hiraganamaster.Kana.KanaData;
+import com.example.hiraganamaster.R;
+import com.example.hiraganamaster.Utils.AnimationUtils;
+
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.view.KeyEvent;
 import android.view.View;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -18,12 +22,6 @@ import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Random;
-
-import retrofit2.Call;
 
 public class MainActivity extends AppCompatActivity {
     private AppBarConfiguration appBarConfiguration;

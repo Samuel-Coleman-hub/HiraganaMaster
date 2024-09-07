@@ -1,4 +1,4 @@
-package com.example.hiraganamaster;
+package com.example.hiraganamaster.Utils;
 // AnimationUtils.java
 import android.content.Context;
 import android.view.animation.Animation;

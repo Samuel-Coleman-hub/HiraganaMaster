@@ -1,13 +1,11 @@
-package com.example.hiraganamaster;
-
-import android.hardware.lights.LightState;
+package com.example.hiraganamaster.Kana;
 
 import java.util.ArrayList;
-import java.util.HashMap;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 import java.util.PriorityQueue;
-import java.util.Random;
+import java.util.Queue;
 
 //Singleton Class to store kana data to be accessed globally
 public class KanaData {
@@ -19,6 +17,10 @@ public class KanaData {
             PriorityQueue<>((a, b) -> Integer.compare(a.getScore(), b.getScore()));
 
     private Kana currentKana;
+
+    private ArrayList<Kana> currentBatch = new ArrayList<>();
+
+    private final int SELECTION_NUMBER = 5;
 
     // Private constructor
     private KanaData() {
@@ -37,7 +39,18 @@ public class KanaData {
 
     public Kana getNextKana()
     {
-        currentKana = kanaQueue.poll();
+        if(currentBatch.isEmpty())
+        {
+            //Number of kana taken from queue at a time
+            for(int i = 0; i < SELECTION_NUMBER && i < kanaQueue.size(); i++)
+            {
+                currentBatch.add(kanaQueue.poll());
+            }
+
+            Collections.shuffle(currentBatch);
+        }
+
+        currentKana = currentBatch.remove(0);
         return currentKana;
     }
 
