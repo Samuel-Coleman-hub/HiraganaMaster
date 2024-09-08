@@ -1,0 +1,28 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/kanaText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="あ"
+        android:textSize="24sp"
+        android:gravity="center" />
+
+    <TextView
+        android:id="@+id/romajiText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="a"
+        android:textSize="12sp"
+        android:gravity="center" />
+
+    <CheckBox
+        android:id="@+id/kanaCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+</LinearLayout>
